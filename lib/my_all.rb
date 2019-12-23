@@ -6,7 +6,7 @@ def my_all?(collection)
   while i < collection.length
     #binding.pry
     block_return_values << yield(collection[i])
-    i =+ 1
+    i = i + 1
   end
 end
 
