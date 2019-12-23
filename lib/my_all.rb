@@ -3,8 +3,8 @@ require 'pry'
 def my_all?(collection)
   i = 0
   block_return_values = []
+  pry
   while i < collection.length
-    pry
     block_return_values << yield(collection[i])
     i =+ 1
   end
