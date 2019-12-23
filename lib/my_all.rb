@@ -7,7 +7,11 @@ def my_all?(collection)
     block_return_values << yield(collection[i])
     i += 1
   end
-  block_return_values
+  if block_return_values.include?(false)
+    false
+  else
+    true
+  end
 end
 
 puts my_all?([1,2,3]) {|i| i < 2}
